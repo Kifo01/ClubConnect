@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-001">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-001">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +13,8 @@
             <objects>
                 <navigationController id="nav-001" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </navigationBar>
                     <connections>
                         <segue destination="welcome-vc" kind="relationship" relationship="rootViewController" id="root-segue"/>
@@ -23,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-840" y="0.0"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Welcome-->
         <scene sceneID="scene-welcome">
             <objects>
                 <viewController id="welcome-vc" customClass="WelcomeViewController" customModule="ClubConnect" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,50 +33,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus Club Connect" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="title-label">
-                                <rect key="frame" x="32" y="136" width="329" height="34"/>
+                                <rect key="frame" x="32" y="204" width="329" height="33.666666666666657"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <color key="textColor" systemColor="labelColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover activities, choose your role, and register your interest in one tap." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="subtitle-label">
-                                <rect key="frame" x="32" y="184" width="329" height="44"/>
+                                <rect key="frame" x="32" y="249.66666666666666" width="329" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="logo-view">
-                                <rect key="frame" x="126.66666666666669" y="256" width="140" height="140"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ClubLogo" translatesAutoresizingMaskIntoConstraints="NO" id="logo-view">
+                                <rect key="frame" x="126.66666666666669" y="318.33333333333331" width="140" height="140"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="logo-width"/>
                                     <constraint firstAttribute="height" constant="140" id="logo-height"/>
+                                    <constraint firstAttribute="width" constant="140" id="logo-width"/>
                                 </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Student name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="name-field">
-                                <rect key="frame" x="32" y="428" width="329" height="34"/>
+                                <rect key="frame" x="32" y="490.33333333333331" width="329" height="33.999999999999943"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="name"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="switch-row">
-                                <rect key="frame" x="32" y="490" width="329" height="31"/>
+                                <rect key="frame" x="32" y="552.33333333333337" width="329" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Meeting reminders" textAlignment="natural" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="switch-label">
-                                        <rect key="frame" x="0.0" y="5.3333333333333144" width="266" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="4" width="256" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" systemColor="labelColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="reminder-switch">
-                                        <rect key="frame" x="278" y="0.0" width="51" height="31"/>
+                                        <rect key="frame" x="268" y="0.0" width="63" height="28"/>
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="role-control">
-                                <rect key="frame" x="32" y="549" width="329" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="role-control">
+                                <rect key="frame" x="32" y="608.33333333333337" width="329" height="32"/>
                                 <segments>
                                     <segment title="Member"/>
                                     <segment title="Officer"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="join-button">
-                                <rect key="frame" x="32" y="621" width="329" height="50"/>
+                                <rect key="frame" x="32" y="679.33333333333337" width="329" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="join-height"/>
@@ -92,26 +91,26 @@
                         <viewLayoutGuide key="safeArea" id="welcome-safe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="title-label" firstAttribute="top" secondItem="welcome-safe" secondAttribute="top" constant="32" id="title-top"/>
-                            <constraint firstItem="title-label" firstAttribute="leading" secondItem="welcome-safe" secondAttribute="leading" constant="32" id="title-leading"/>
-                            <constraint firstItem="welcome-safe" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" constant="32" id="title-trailing"/>
-                            <constraint firstItem="subtitle-label" firstAttribute="top" secondItem="title-label" secondAttribute="bottom" constant="12" id="subtitle-top"/>
-                            <constraint firstItem="subtitle-label" firstAttribute="leading" secondItem="title-label" secondAttribute="leading" id="subtitle-leading"/>
-                            <constraint firstItem="subtitle-label" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" id="subtitle-trailing"/>
-                            <constraint firstItem="logo-view" firstAttribute="top" secondItem="subtitle-label" secondAttribute="bottom" constant="28" id="logo-top"/>
-                            <constraint firstItem="logo-view" firstAttribute="centerX" secondItem="welcome-safe" secondAttribute="centerX" id="logo-center"/>
-                            <constraint firstItem="name-field" firstAttribute="top" secondItem="logo-view" secondAttribute="bottom" constant="32" id="field-top"/>
                             <constraint firstItem="name-field" firstAttribute="leading" secondItem="title-label" secondAttribute="leading" id="field-leading"/>
+                            <constraint firstItem="name-field" firstAttribute="top" secondItem="logo-view" secondAttribute="bottom" constant="32" id="field-top"/>
                             <constraint firstItem="name-field" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" id="field-trailing"/>
-                            <constraint firstItem="switch-row" firstAttribute="top" secondItem="name-field" secondAttribute="bottom" constant="28" id="switch-top"/>
-                            <constraint firstItem="switch-row" firstAttribute="leading" secondItem="title-label" secondAttribute="leading" id="switch-leading"/>
-                            <constraint firstItem="switch-row" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" id="switch-trailing"/>
-                            <constraint firstItem="role-control" firstAttribute="top" secondItem="switch-row" secondAttribute="bottom" constant="28" id="role-top"/>
-                            <constraint firstItem="role-control" firstAttribute="leading" secondItem="title-label" secondAttribute="leading" id="role-leading"/>
-                            <constraint firstItem="role-control" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" id="role-trailing"/>
-                            <constraint firstItem="join-button" firstAttribute="top" secondItem="role-control" secondAttribute="bottom" constant="40" id="join-top"/>
                             <constraint firstItem="join-button" firstAttribute="leading" secondItem="title-label" secondAttribute="leading" id="join-leading"/>
+                            <constraint firstItem="join-button" firstAttribute="top" secondItem="role-control" secondAttribute="bottom" constant="40" id="join-top"/>
                             <constraint firstItem="join-button" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" id="join-trailing"/>
+                            <constraint firstItem="logo-view" firstAttribute="centerX" secondItem="welcome-safe" secondAttribute="centerX" id="logo-center"/>
+                            <constraint firstItem="logo-view" firstAttribute="top" secondItem="subtitle-label" secondAttribute="bottom" constant="28" id="logo-top"/>
+                            <constraint firstItem="role-control" firstAttribute="leading" secondItem="title-label" secondAttribute="leading" id="role-leading"/>
+                            <constraint firstItem="role-control" firstAttribute="top" secondItem="switch-row" secondAttribute="bottom" constant="28" id="role-top"/>
+                            <constraint firstItem="role-control" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" id="role-trailing"/>
+                            <constraint firstItem="subtitle-label" firstAttribute="leading" secondItem="title-label" secondAttribute="leading" id="subtitle-leading"/>
+                            <constraint firstItem="subtitle-label" firstAttribute="top" secondItem="title-label" secondAttribute="bottom" constant="12" id="subtitle-top"/>
+                            <constraint firstItem="subtitle-label" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" id="subtitle-trailing"/>
+                            <constraint firstItem="switch-row" firstAttribute="leading" secondItem="title-label" secondAttribute="leading" id="switch-leading"/>
+                            <constraint firstItem="switch-row" firstAttribute="top" secondItem="name-field" secondAttribute="bottom" constant="28" id="switch-top"/>
+                            <constraint firstItem="switch-row" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" id="switch-trailing"/>
+                            <constraint firstItem="title-label" firstAttribute="leading" secondItem="welcome-safe" secondAttribute="leading" constant="32" id="title-leading"/>
+                            <constraint firstItem="title-label" firstAttribute="top" secondItem="welcome-safe" secondAttribute="top" constant="32" id="title-top"/>
+                            <constraint firstItem="welcome-safe" firstAttribute="trailing" secondItem="title-label" secondAttribute="trailing" constant="32" id="title-trailing"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Welcome" id="welcome-nav-item"/>
@@ -127,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Confirmation View Controller-->
+        <!--Confirmation-->
         <scene sceneID="scene-confirm">
             <objects>
                 <viewController id="confirm-vc" customClass="ConfirmationViewController" customModule="ClubConnect" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,17 +135,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmation message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" translatesAutoresizingMaskIntoConstraints="NO" id="message-label">
-                                <rect key="frame" x="32" y="284" width="329" height="124"/>
+                                <rect key="frame" x="32" y="425" width="329" height="26.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" systemColor="labelColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="confirm-safe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="message-label" firstAttribute="centerY" secondItem="confirm-safe" secondAttribute="centerY" constant="-40" id="message-center-y"/>
                             <constraint firstItem="message-label" firstAttribute="leading" secondItem="confirm-safe" secondAttribute="leading" constant="32" id="message-leading"/>
                             <constraint firstItem="confirm-safe" firstAttribute="trailing" secondItem="message-label" secondAttribute="trailing" constant="32" id="message-trailing"/>
-                            <constraint firstItem="message-label" firstAttribute="centerY" secondItem="confirm-safe" secondAttribute="centerY" constant="-40" id="message-center-y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Confirmation" id="confirm-nav-item"/>
@@ -160,20 +158,18 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="ClubLogo" width="640" height="639"/>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
